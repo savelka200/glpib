@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "975499720626",
+    "project_id": "glpib-585cb",
+    "storage_bucket": "glpib-585cb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:975499720626:android:34475c68f5ab55ec2d16ab",
+        "android_client_info": {
+          "package_name": "com.example.glpib"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "975499720626-pt7f58onqmrrr3vfptagjnieffmpad5q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBAglT7kapJPLrS9QSzODn0W8Ymxsa538"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "975499720626-pt7f58onqmrrr3vfptagjnieffmpad5q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
