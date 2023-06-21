@@ -27,8 +27,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        init();
+
         mAuth = FirebaseAuth.getInstance();
+        FirebaseUser cUser = mAuth.getCurrentUser();
+        if (cUser != null){
+            Toast.makeText(this, "С возвращением! " + cUser.getEmail(), Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(MainActivity.this , ticketsListActivity.class);
+            MainActivity.this.startActivity(intent);
+        }
+        else{
+            Toast.makeText(this, "User null", Toast.LENGTH_SHORT).show();
+        }
+        init();
     }
     public void init(){
         email = findViewById(R.id.ldaplogin);
@@ -49,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()){
                         Toast.makeText(getApplicationContext(), "Вы вошли", Toast.LENGTH_SHORT).show();
-                        nowUser = new user(email.getText().toString());
                         Intent intent = new Intent(MainActivity.this , ticketsListActivity.class);
                         MainActivity.this.startActivity(intent);
                     }
